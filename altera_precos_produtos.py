@@ -14,6 +14,8 @@ load_dotenv()
 
 user = os.getenv("USER")
 password = os.getenv("PASSWORD")
+url_login = os.getenv("URL_LOGIN")
+url_produtos = os.getenv("URL_PRODUTOS")
 
 extensao_path = r"C:\Users\fid2\AppData\Local\Google\Chrome\User Data\Default\Extensions\bhghoamapcdpbohphigoooaddinpkbai\8.0.1_0"
 perfil_path   = r"C:\Users\fid2\AppData\Local\Google\Chrome\User Data" 
@@ -63,7 +65,7 @@ def scroll_ate_elemento(by, value):
 
 
 def realizar_login(code):
-    driver.get('https://www.fidcomex.com.br/wapstore/acesso')
+    driver.get(url_login)
 
     # _enviar_dados_elemento(By.XPATH, '//input[contains(@name, "email")]', user)
     # _enviar_dados_elemento(By.XPATH, '//input[contains(@name, "senha")]', password)
@@ -130,7 +132,7 @@ def filtra():
 
 def acessa_tela_produtos():
     time.sleep(2)
-    driver.get('https://www.fidcomex.com.br/wapstore/produto/gerenciamento')
+    driver.get(url_produtos)
 
     filtra()
 
