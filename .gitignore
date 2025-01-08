@@ -1,1 +1,14 @@
-/.env
+# Ignorar arquivos de configuração e credenciais sensíveis
+.env
+
+# Ignorar pastas de ambientes virtuais
+.venv/
+venv/
+
+# Ignorar arquivos de cache do Python
+__pycache__/
+*.py[cod]
+
+# Ignorar logs e arquivos temporários
+*.log
+*.tmp
